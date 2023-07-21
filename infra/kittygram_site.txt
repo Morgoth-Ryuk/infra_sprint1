@@ -1,0 +1,5 @@
+IP: 158.160.72.63;
+name_taski: https://yandextesttask.hopto.org;
+name_kittygram: https://yandexcatscherkas.hopto.org;
+login: lissabail;
+password: lissabail;
