@@ -24,11 +24,13 @@ server {
     if ($host = yandextesttask.hopto.org) {
         return 301 https://$host$request_uri;
     }
-
+    if ($host = yandexcatscherkas.hopto.org) {
+        return 301 https://$host$request_uri;
+    }
 
 
     listen 80;
-    server_name 158.160.72.63 yandextesttask.hopto.org;
+    server_name 158.160.72.63 yandextesttask.hopto.org yandexcatscherkas.hopto.org;
     return 404;
 
 
@@ -59,21 +61,6 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/yandexcatscherkas.hopto.org/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-
-}
-
-
-server {
-    if ($host = yandexcatscherkas.hopto.org) {
-        return 301 https://$host$request_uri;
-    }
-
-
-    listen 80;
-
-    server_name 158.160.72.63 yandexcatscherkas.hopto.org;
-    return 404;
-
 
 }
 
